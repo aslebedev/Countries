@@ -8,10 +8,11 @@
 
 import Foundation
 
-struct Country {
+struct Country: Codable {
     let name: String
     let capital: String
     let population: Int
+    let description: String
     
     var countryInfo: [String] {
         var array = [String]()

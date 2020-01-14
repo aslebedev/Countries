@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    //  https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvsection=0&rvprop=content&format=jsonfm&titles=England
-
     var countries = [Country]()
     
     override func viewDidLoad() {
@@ -19,11 +17,23 @@ class ViewController: UITableViewController {
 
         title = "Countries"
         navigationController?.navigationBar.prefersLargeTitles = true
-        
-        countries.append(Country(name: "Russia", capital: "Moscow", population: 144))
-        countries.append(Country(name: "England", capital: "London", population: 85))
-    }
 
+        
+        let fileName = "countries.json"
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: nil) else {
+            fatalError("Failed to locate \(fileName) in bundle.")
+        }
+        
+        if let data = try? Data(contentsOf: url) {
+            if let decoded = try? JSONDecoder().decode([Country].self, from: data) {
+                countries = decoded
+            } else {
+                fatalError("Failed to decode \(fileName)")
+            }
+        } else {
+            fatalError("Failed to get data from url file \(fileName)")
+        }
+    }
     // MARK: - Table view data source
     /*
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,9 +49,6 @@ class ViewController: UITableViewController {
     // Returns cells
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CountryName", for: indexPath)
-//        DispatchQueue.main.async {
-//            cell.textLabel?.text = self.countries[indexPath.row]
-//        }
         cell.textLabel?.text = self.countries[indexPath.row].name
         return cell
     }
@@ -50,7 +57,7 @@ class ViewController: UITableViewController {
         // 1: try loading the "Detail" view controller and typecasting it to be DetailViewController
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
             // 2: success! Set its selectedImage property
-            vc.countryInfo = countries[indexPath.row].countryInfo
+            vc.country = countries[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
         }
     }

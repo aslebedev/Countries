@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1142B74723CDB604002DD63E /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 1142B74623CDB604002DD63E /* countries.json */; };
+		1142B74923CDC3EC002DD63E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1142B74823CDC3EC002DD63E /* Extensions.swift */; };
 		118FBC152387BC88009D2ED1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118FBC142387BC88009D2ED1 /* AppDelegate.swift */; };
 		118FBC172387BC88009D2ED1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118FBC162387BC88009D2ED1 /* SceneDelegate.swift */; };
 		118FBC1C2387BC88009D2ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118FBC1A2387BC88009D2ED1 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1142B74623CDB604002DD63E /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		1142B74823CDC3EC002DD63E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		118FBC112387BC88009D2ED1 /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		118FBC142387BC88009D2ED1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		118FBC162387BC88009D2ED1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 			children = (
 				118FBC142387BC88009D2ED1 /* AppDelegate.swift */,
 				118FBC162387BC88009D2ED1 /* SceneDelegate.swift */,
+				1142B74823CDC3EC002DD63E /* Extensions.swift */,
 				118FBC2F2387BFAA009D2ED1 /* Country.swift */,
 				118FBC2B2387BCB9009D2ED1 /* ViewController.swift */,
 				118FBC2D2387BCC7009D2ED1 /* DetailViewController.swift */,
@@ -72,6 +77,7 @@
 				118FBC222387BC8A009D2ED1 /* LaunchScreen.storyboard */,
 				118FBC252387BC8A009D2ED1 /* Info.plist */,
 				118FBC1D2387BC88009D2ED1 /* Countries.xcdatamodeld */,
+				1142B74623CDB604002DD63E /* countries.json */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -136,6 +142,7 @@
 			files = (
 				118FBC242387BC8A009D2ED1 /* LaunchScreen.storyboard in Resources */,
 				118FBC212387BC8A009D2ED1 /* Assets.xcassets in Resources */,
+				1142B74723CDB604002DD63E /* countries.json in Resources */,
 				118FBC1C2387BC88009D2ED1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +160,7 @@
 				118FBC2C2387BCB9009D2ED1 /* ViewController.swift in Sources */,
 				118FBC302387BFAA009D2ED1 /* Country.swift in Sources */,
 				118FBC172387BC88009D2ED1 /* SceneDelegate.swift in Sources */,
+				1142B74923CDC3EC002DD63E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

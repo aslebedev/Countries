@@ -1,0 +1,20 @@
+[
+    {
+        "name":"Russia",
+        "capital":"Moscow",
+        "population":146801931,
+        "description":"Russia, officially the Russian Federation, is a transcontinental country in Eastern Europe and North Asia."
+    },
+    {
+        "name":"England",
+        "capital":"London",
+        "population":55619400,
+        "description":"England is a country that is part of the United Kingdom."
+    },
+    {
+        "name":"France",
+        "capital":"Paris",
+        "population":67022000,
+        "description":"France, officially the French Republic, is a country whose territory consists of metropolitan France in Western Europe and several overseas regions and territories."
+    }
+]

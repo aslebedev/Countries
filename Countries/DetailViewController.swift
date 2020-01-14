@@ -10,10 +10,24 @@ import UIKit
 
 class DetailViewController: UITableViewController {
     
-    var countryInfo = [String]()
+    var country: Country!
+    var countryInfo: [String] {
+        var array = [String]()
+        let mirror = Mirror(reflecting: country as Country)
+        for property in mirror.children {
+            let label = property.label != nil ? property.label! + ": " : ""
+            let value = String(describing: property.value)
+            if !value.isEmpty {
+                array.append(label.capitalizedFirst + value)
+            }
+        }
+        return array
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = country.name
     }
 
     // MARK: - Table view data source
